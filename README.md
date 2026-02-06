@@ -54,22 +54,19 @@ If you run a local server from the repo root (example below), you can open each 
 python3 -m http.server 8000
 
 Then open:
-- `http://localhost:8000/d3/`
-- `http://localhost:8000/python-altair/altair.html`
-- `http://localhost:8000/python-plotly/plotly.html`
+- http://localhost:8000/d3/
+- http://localhost:8000/python-altair/altair.html
+- http://localhost:8000/python-plotly/plotly.html
 
-> Tip: You can also open the HTML files directly, but a local server keeps paths consistent (especially if anything loads assets).
+> You can also open the HTML files directly, but a local server keeps paths consistent (especially if anything loads assets).
 
 ---
 
 ## d3
 
-**Local link:** `http://localhost:8000/d3/`
+**Local link:** http://localhost:8000/d3/
 
 ![d3 penguins](img/d3.png)
-
-**Screenshot notes:**  
-(leave space for your final screenshot — already referenced above)
 
 **Reflection:**  
 The d3 version gave me the most direct control over scales, axes, legends, and interaction. The main challenge was handling **asynchronous CSV loading** and ensuring the visualization only renders after cleaning/filtering the data. d3 is ideal when you want full customization (tooltips, filters, custom legends), but it requires more code than “tool” workflows.
@@ -82,12 +79,9 @@ The d3 version gave me the most direct control over scales, axes, legends, and i
 
 ## Altair (Vega-Lite)
 
-**Local link:** `http://localhost:8000/python-altair/altair.html`
+**Local link:** http://localhost:8000/python-altair/altair.html
 
 ![altair penguins](img/altair.png)
-
-**Screenshot notes:**  
-(leave space for your final screenshot — already referenced above)
 
 **Reflection:**  
 Altair made it quick to reproduce the chart once the encodings were set. Tooltips and export come naturally through Vega/Vega-Lite, which makes it good for fast iteration. The key adjustment was matching bubble sizing, since Altair’s `size` channel represents **area**, not radius—so I tuned the size scale to visually match the reference/d3.
@@ -100,12 +94,9 @@ Altair made it quick to reproduce the chart once the encodings were set. Tooltip
 
 ## Plotly
 
-**Local link:** `http://localhost:8000/python-plotly/plotly.html`
+**Local link:** http://localhost:8000/python-plotly/plotly.html
 
 ![plotly penguins](img/plotly.png)
-
-**Screenshot notes:**  
-(leave space for your final screenshot — already referenced above)
 
 **Reflection:**  
 Plotly is convenient for quickly generating an interactive scatter plot with hover, pan, and zoom. Matching the reference required tuning marker sizing because Plotly scales marker size differently than d3. I kept a consistent category order and palette across tools and added a checkbox in the wrapper HTML to optionally flip the y-axis screen direction.
@@ -123,9 +114,6 @@ Plotly is convenient for quickly generating an interactive scatter plot with hov
 - `excel/excel_penguins.png`
 
 ![excel penguins](img/excel.png)
-
-**Screenshot notes:**  
-(leave space for your final screenshot — already referenced above)
 
 **Reflection:**  
 Excel was fast for building a chart, but it required more manual setup to match the reference. Color mapping by species meant creating separate series (one per species), and bubble sizing needed manual scaling (bubble scale %) to avoid oversized markers. Excel is useful for quick exploratory visuals or sharing with non-programmers, but it’s less reproducible than code-based approaches.
@@ -162,9 +150,9 @@ Datawrapper was the quickest way to produce a polished chart and export a PNG. I
   - Libraries: d3, Altair, Plotly
   - Tools: Excel, Datawrapper
 - **Cross-tool consistency:** preserved the same core encodings everywhere:
-  - X = flipper length, Y = body mass  
-  - color = species, size = bill length  
-  - opacity ≈ 0.8  
+  - X = flipper length, Y = body mass
+  - color = species, size = bill length
+  - opacity ≈ 0.8
   - axis domains set from data (not forced to 0)
 - **Interactivity (coded versions):**
   - d3: hover tooltip + filtering/legend toggles + optional “Data downward” checkbox
@@ -191,4 +179,4 @@ Datawrapper was the quickest way to produce a polished chart and export a PNG. I
 
 ## Submission
 
-- **Pull Request:**
+- **Pull Request:** 
