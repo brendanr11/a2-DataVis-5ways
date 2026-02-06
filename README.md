@@ -58,6 +58,8 @@ Then open:
 - http://localhost:8000/python-altair/altair.html
 - http://localhost:8000/python-plotly/plotly.html
 
+```
+
 > You can also open the HTML files directly, but a local server keeps paths consistent (especially if anything loads assets).
 
 ---
