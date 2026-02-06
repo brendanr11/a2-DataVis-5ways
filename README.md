@@ -115,7 +115,7 @@ Plotly is convenient for quickly generating an interactive scatter plot with hov
 - `excel/excel_penguins.xlsx`
 - `excel/excel_penguins.png`
 
-![excel penguins](img/excel.png)
+![excel penguins](img/excel_penguins.png)
 
 **Reflection:**  
 Excel was fast for building a chart, but it required more manual setup to match the reference. Color mapping by species meant creating separate series (one per species), and bubble sizing needed manual scaling (bubble scale %) to avoid oversized markers. Excel is useful for quick exploratory visuals or sharing with non-programmers, but it’s less reproducible than code-based approaches.
